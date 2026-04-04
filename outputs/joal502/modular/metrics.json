@@ -1,0 +1,27 @@
+{
+  "lengths_px": {
+    "centerline_px": 3424.2278910098053,
+    "inner_px": 3309.2791491568146,
+    "outer_px": 3535.0622837098804
+  },
+  "lengths_m": {
+    "centerline_m": 281.11068750585133,
+    "inner_m": 271.674014223952,
+    "outer_m": 290.2095948574948
+  },
+  "area_px2": {
+    "corridor_px2": 245662.47607326508
+  },
+  "area_m2": {
+    "corridor_m2": 1655.6488002108363
+  },
+  "calibration_ref": "outputs/scale_detection/scale_detection.json",
+  "measurement_policy": {
+    "boundary_method": "shell_contour_split",
+    "filters": [
+      "exclude_rows=[1556]",
+      "moving_average_k=9"
+    ],
+    "smooth_window": 9
+  }
+}

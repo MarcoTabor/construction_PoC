@@ -1,0 +1,50 @@
+{
+  "inputs": {
+    "pdf": "examples/Joal 502.pdf",
+    "vectors_json": "outputs/joal502/joal_vectors_relaxed.json",
+    "scale_json": "outputs/scale_detection/scale_detection.json",
+    "page": 1,
+    "pixels_per_point": 3.0
+  },
+  "outputs": {
+    "centerline_json": "outputs\\joal502\\modular\\centerline.json",
+    "shell_mask": "outputs\\joal502\\modular\\shell_mask.png",
+    "shell_inner_outer_json": "outputs\\joal502\\modular\\inner_outer_shell.json",
+    "curves_smoothed_json": "outputs\\joal502\\modular\\curves_smoothed.json",
+    "metrics_json": "outputs\\joal502\\modular\\metrics.json",
+    "visual_manifest": {
+      "overlay_mask": "outputs\\joal502\\modular\\visualizations\\final_mask_overlay.png",
+      "overlay_plan": "outputs\\joal502\\modular\\visualizations\\final_lines_on_plan_transparent.png",
+      "transparent_layer": "outputs\\joal502\\modular\\visualizations\\final_lines_transparent.png",
+      "line_styles": {
+        "inner": {
+          "color_bgr": [
+            255,
+            0,
+            255
+          ],
+          "thickness": 1
+        },
+        "center": {
+          "color_bgr": [
+            0,
+            191,
+            255
+          ],
+          "thickness": 1
+        },
+        "outer": {
+          "color_bgr": [
+            255,
+            255,
+            0
+          ],
+          "thickness": 1
+        }
+      },
+      "notes": [
+        "Mask overlay uses green fill for shell visibility."
+      ]
+    }
+  }
+}
