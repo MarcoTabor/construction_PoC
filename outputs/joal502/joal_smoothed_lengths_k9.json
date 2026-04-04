@@ -1,0 +1,17 @@
+{
+  "smoothing": {
+    "method": "moving_average",
+    "window": 9
+  },
+  "meters_per_pixel": 0.08361489066666666,
+  "lengths_m": {
+    "centerline_smoothed_m": 286.4977787738081,
+    "inner_smoothed_m": 276.7783486939736,
+    "outer_smoothed_m": 294.5522218961161
+  },
+  "raw_lengths_m": {
+    "centerline_raw_m": 307.1988518550691,
+    "inner_raw_m": 281.23910137752694,
+    "outer_raw_m": 299.48523522679443
+  }
+}

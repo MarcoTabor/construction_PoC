@@ -1,0 +1,60 @@
+2026-04-01 16:48:14 | INFO    | STEP 01 | Starting extraction run
+2026-04-01 16:48:14 | INFO    | STEP 01 | Input PDF: examples\Joal 502.pdf
+2026-04-01 16:48:14 | INFO    | STEP 01 | Output dir: outputs\joal502
+2026-04-01 16:48:14 | INFO    | STEP 02 | Opened PDF successfully
+2026-04-01 16:48:14 | INFO    | STEP 02 | Pages in document: 1
+2026-04-01 16:48:14 | INFO    | STEP 02 | Pages to process: 1
+2026-04-01 16:48:14 | DEBUG   | STEP 02 | Metadata: {'format': 'PDF 1.7', 'title': '', 'author': '', 'subject': '', 'keywords': '', 'creator': '', 'producer': '3.0.31 (5.1.15) ', 'creationDate': "D:20260121100145+13'00'", 'modDate': "D:20260120232342+01'00'", 'trapped': '', 'encryption': None}
+2026-04-01 16:48:14 | INFO    | STEP 03 | Beginning per-page extraction loop
+2026-04-01 16:48:14 | INFO    | STEP 03.01 | Page 1 extraction start
+2026-04-01 16:48:14 | DEBUG   | STEP 03.01 | Page dimensions (pt): width=841.89 height=595.28
+2026-04-01 16:48:14 | INFO    | STEP 03.01 | Extracted words=434
+2026-04-01 16:48:15 | INFO    | STEP 03.01 | Extracted drawing objects=5870
+2026-04-01 16:48:15 | DEBUG   | STEP 03.01 | Token keyword hit token='CONC' bbox=[87.55, 418.55, 92.72, 430.83]
+2026-04-01 16:48:15 | DEBUG   | STEP 03.01 | Token keyword hit token='CONC' bbox=[714.03, 403.29, 719.05, 415.39]
+2026-04-01 16:48:15 | DEBUG   | STEP 03.01 | Token keyword hit token='CONC' bbox=[136.84, 317.71, 149.49, 323.82]
+2026-04-01 16:48:15 | DEBUG   | STEP 03.01 | Token keyword hit token='CONC' bbox=[229.08, 221.64, 242.11, 231.41]
+2026-04-01 16:48:15 | DEBUG   | STEP 03.01 | Token keyword hit token='CONC' bbox=[695.97, 191.12, 705.09, 204.25]
+2026-04-01 16:48:15 | DEBUG   | STEP 03.01 | Token keyword hit token='FOOTPATH' bbox=[104.89, 135.20, 127.17, 140.21]
+2026-04-01 16:48:15 | INFO    | STEP 03.01 | Matched keyword hits=12
+2026-04-01 16:48:16 | INFO    | STEP 04 | Building spatial links between text hits and drawing candidates
+2026-04-01 16:48:16 | INFO    | STEP 04 | Spatial linking complete: total_hits=12 linked=6 unlinked=6
+2026-04-01 16:48:16 | INFO    | STEP 05 | Aggregating feature-level summary metrics
+2026-04-01 16:48:16 | INFO    | STEP 06 | Writing output artifacts
+2026-04-01 16:48:17 | INFO    | STEP 07 | Review queue size=6
+2026-04-01 16:48:17 | INFO    | STEP 08 | Run complete
+2026-04-01 16:48:17 | INFO    | STEP 08 | Summary file: outputs\joal502\summary.json
+2026-04-01 16:48:17 | INFO    | STEP 08 | Log file: outputs\joal502\run.log
+2026-04-02 19:45:41 | INFO    | STEP 01 | Starting extraction run
+2026-04-02 19:45:41 | INFO    | STEP 01 | Input PDF: examples\Joal 502.pdf
+2026-04-02 19:45:41 | INFO    | STEP 01 | Output dir: outputs\joal502
+2026-04-02 19:45:41 | INFO    | STEP 02 | Opened PDF successfully
+2026-04-02 19:45:41 | INFO    | STEP 02 | Pages in document: 1
+2026-04-02 19:45:41 | INFO    | STEP 02 | Pages to process: 1
+2026-04-02 19:45:41 | DEBUG   | STEP 02 | Metadata: {'format': 'PDF 1.7', 'title': '', 'author': '', 'subject': '', 'keywords': '', 'creator': '', 'producer': '3.0.31 (5.1.15) ', 'creationDate': "D:20260121100145+13'00'", 'modDate': "D:20260120232342+01'00'", 'trapped': '', 'encryption': None}
+2026-04-02 19:45:41 | INFO    | STEP 03 | Beginning per-page extraction loop
+2026-04-02 19:45:41 | INFO    | STEP 03.01 | Page 1 extraction start
+2026-04-02 19:45:41 | DEBUG   | STEP 03.01 | Page dimensions (pt): width=841.89 height=595.28
+2026-04-02 19:45:41 | INFO    | STEP 03.01 | Extracted words=434
+2026-04-02 19:45:41 | INFO    | STEP 03.01 | Extracted text lines=262
+2026-04-02 19:45:41 | INFO    | STEP 03.01 | Scale candidates=2
+2026-04-02 19:45:41 | INFO    | STEP 03.01 | Legend region source=legend_heading entries=2
+2026-04-02 19:45:41 | INFO    | STEP 03.01 | Extracted drawing objects=5870
+2026-04-02 19:45:41 | DEBUG   | STEP 03.01 | Token keyword hit token='CONC' bbox=[87.55, 418.55, 92.72, 430.83]
+2026-04-02 19:45:41 | DEBUG   | STEP 03.01 | Token keyword hit token='CONC' bbox=[714.03, 403.29, 719.05, 415.39]
+2026-04-02 19:45:41 | DEBUG   | STEP 03.01 | Token keyword hit token='CONC' bbox=[136.84, 317.71, 149.49, 323.82]
+2026-04-02 19:45:41 | DEBUG   | STEP 03.01 | Token keyword hit token='CONC' bbox=[229.08, 221.64, 242.11, 231.41]
+2026-04-02 19:45:41 | DEBUG   | STEP 03.01 | Token keyword hit token='CONC' bbox=[695.97, 191.12, 705.09, 204.25]
+2026-04-02 19:45:41 | DEBUG   | STEP 03.01 | Token keyword hit token='FOOTPATH' bbox=[104.89, 135.20, 127.17, 140.21]
+2026-04-02 19:45:41 | INFO    | STEP 03.01 | Matched keyword hits=12
+2026-04-02 19:45:41 | INFO    | STEP 03B | Linking legend entries to nearby symbol geometry
+2026-04-02 19:45:41 | INFO    | STEP 03B | Legend symbol links=2
+2026-04-02 19:45:41 | INFO    | STEP 04 | Building spatial links between text hits and drawing candidates
+2026-04-02 19:45:41 | INFO    | STEP 04 | Spatial linking complete: total_hits=12 linked=6 unlinked=6
+2026-04-02 19:45:41 | INFO    | STEP 05 | Aggregating feature-level summary metrics
+2026-04-02 19:45:41 | INFO    | STEP 06 | Writing output artifacts
+2026-04-02 19:45:41 | INFO    | STEP 06A | Rendering visual overlays
+2026-04-02 19:45:42 | INFO    | STEP 07 | Review queue size=6
+2026-04-02 19:45:42 | INFO    | STEP 08 | Run complete
+2026-04-02 19:45:42 | INFO    | STEP 08 | Summary file: outputs\joal502\summary.json
+2026-04-02 19:45:42 | INFO    | STEP 08 | Log file: outputs\joal502\run.log

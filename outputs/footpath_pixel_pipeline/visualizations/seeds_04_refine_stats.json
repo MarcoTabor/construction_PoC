@@ -1,0 +1,27 @@
+{
+  "input_graph": "outputs/footpath_pixel_pipeline/visualizations/seeds_02_graph.json",
+  "w_dist": 1.0,
+  "w_mid": 0.03,
+  "w_move": 0.02,
+  "w_curv": 0.02,
+  "iters_requested": 8,
+  "iters_run": 8,
+  "mean_move_per_iter": [
+    4.745153739012115,
+    0.9643019134519825,
+    0.4568298977938571,
+    0.2935676807185378,
+    0.3518767056210663,
+    0.18995096239299233,
+    0.23728813559322035,
+    0.11016949152542373
+  ],
+  "snapped_seed_count": 36,
+  "path_len": 118,
+  "disp_px": {
+    "median": 5.915475845336914,
+    "mean": 6.582856178283691,
+    "p90": 11.63088607788086,
+    "max": 31.016124725341797
+  }
+}

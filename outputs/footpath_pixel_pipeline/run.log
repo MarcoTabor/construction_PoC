@@ -1,0 +1,210 @@
+2026-04-02 20:38:58 | INFO    | STEP 01 | Loading footpath legend color
+2026-04-02 20:38:58 | INFO    | STEP 01 | Footpath RGB from legend: (204, 204, 204)
+2026-04-02 20:38:58 | INFO    | STEP 02 | Rendering PDF page at 300 DPI
+2026-04-02 20:38:58 | INFO    | STEP 03 | Building raw RGB-distance mask
+2026-04-02 20:38:59 | INFO    | STEP 04 | Removing page furniture regions
+2026-04-02 20:38:59 | INFO    | STEP 04 | Removed legend block px bbox=(58,39,1320,1247)
+2026-04-02 20:38:59 | INFO    | STEP 04 | Removed title strip height=273 px
+2026-04-02 20:38:59 | INFO    | STEP 05 | Connected-components analysis
+2026-04-02 20:38:59 | INFO    | STEP 05 | Components found (excluding background): 48
+2026-04-02 20:38:59 | INFO    | STEP 06 | Rendering final magenta overlay
+2026-04-02 20:38:59 | INFO    | STEP 07 | Writing diagnostics JSON
+2026-04-02 20:38:59 | INFO    | STEP 08 | Done. Selected components=33
+2026-04-02 20:38:59 | INFO    | STEP 08 | JSON: outputs\footpath_pixel_pipeline\footpath_pixel_pipeline.json
+2026-04-02 20:39:16 | INFO    | STEP 01 | Loading footpath legend color
+2026-04-02 20:39:16 | INFO    | STEP 01 | Footpath RGB from legend: (204, 204, 204)
+2026-04-02 20:39:16 | INFO    | STEP 02 | Rendering PDF page at 300 DPI
+2026-04-02 20:39:17 | INFO    | STEP 03 | Building raw RGB-distance mask
+2026-04-02 20:39:17 | INFO    | STEP 04 | Removing page furniture regions
+2026-04-02 20:39:17 | INFO    | STEP 04 | Removed legend block px bbox=(58,39,1320,1247)
+2026-04-02 20:39:17 | INFO    | STEP 04 | Removed title strip height=273 px
+2026-04-02 20:39:17 | INFO    | STEP 05 | Connected-components analysis
+2026-04-02 20:39:17 | INFO    | STEP 05 | Components found (excluding background): 48
+2026-04-02 20:39:18 | INFO    | STEP 06 | Rendering final magenta overlay
+2026-04-02 20:39:18 | INFO    | STEP 07 | Writing diagnostics JSON
+2026-04-02 20:39:18 | INFO    | STEP 08 | Done. Selected components=33
+2026-04-02 20:39:18 | INFO    | STEP 08 | JSON: outputs\footpath_pixel_pipeline\footpath_pixel_pipeline.json
+2026-04-02 20:44:02 | INFO    | STEP 01 | Loading footpath legend color
+2026-04-02 20:44:02 | INFO    | STEP 01 | Footpath RGB from legend: (204, 204, 204)
+2026-04-02 20:44:02 | INFO    | STEP 02 | Rendering PDF page at 300 DPI
+2026-04-02 20:44:02 | INFO    | STEP 03 | Building raw RGB-distance mask
+2026-04-02 20:44:03 | INFO    | STEP 04 | Removing page furniture regions
+2026-04-02 20:44:03 | INFO    | STEP 04 | Removed legend block px bbox=(58,39,1320,1247)
+2026-04-02 20:44:03 | INFO    | STEP 04 | Removed title strip height=273 px
+2026-04-02 20:44:03 | INFO    | STEP 05 | Connected-components analysis
+2026-04-02 20:44:03 | INFO    | STEP 05 | Components found (excluding background): 48
+2026-04-02 20:44:03 | INFO    | STEP 06 | Rendering baseline magenta overlay
+2026-04-02 20:44:03 | INFO    | STEP 07 | Building non-surface overlap mask
+2026-04-02 20:44:03 | INFO    | STEP 08 | Resolving overlaps and healing strip continuity
+2026-04-02 20:44:03 | INFO    | STEP 09 | Polygon preview from resolved mask
+2026-04-02 20:44:03 | INFO    | STEP 10 | Writing diagnostics JSON
+2026-04-02 20:44:03 | INFO    | STEP 11 | Done. Selected components=33 polygons=10
+2026-04-02 20:44:03 | INFO    | STEP 11 | JSON: outputs\footpath_pixel_pipeline\footpath_pixel_pipeline.json
+2026-04-02 20:51:44 | INFO    | STEP 01 | Loading footpath legend color
+2026-04-02 20:51:44 | INFO    | STEP 01 | Footpath RGB from legend: (204, 204, 204)
+2026-04-02 20:51:44 | INFO    | STEP 02 | Rendering PDF page at 300 DPI
+2026-04-02 20:51:45 | INFO    | STEP 03 | Building raw RGB-distance mask
+2026-04-02 20:51:45 | INFO    | STEP 04 | Removing page furniture regions
+2026-04-02 20:51:45 | INFO    | STEP 04 | Removed legend block px bbox=(58,39,1320,1247)
+2026-04-02 20:51:45 | INFO    | STEP 04 | Removed title strip height=273 px
+2026-04-02 20:51:45 | INFO    | STEP 05 | Connected-components analysis
+2026-04-02 20:51:45 | INFO    | STEP 05 | Components found (excluding background): 48
+2026-04-02 20:51:45 | INFO    | STEP 06 | Rendering baseline magenta overlay
+2026-04-02 20:51:45 | INFO    | STEP 07 | Building non-surface overlap mask
+2026-04-02 20:51:45 | INFO    | STEP 08 | Resolving overlaps and healing strip continuity
+2026-04-02 20:51:45 | INFO    | STEP 08B | Corridor continuity enforcement
+2026-04-02 20:51:46 | INFO    | STEP 09 | Polygon preview from resolved mask
+2026-04-02 20:51:46 | INFO    | STEP 10 | Writing diagnostics JSON
+2026-04-02 20:51:46 | INFO    | STEP 11 | Done. Selected components=33 polygons=2
+2026-04-02 20:51:46 | INFO    | STEP 11 | JSON: outputs\footpath_pixel_pipeline\footpath_pixel_pipeline.json
+2026-04-02 21:06:38 | INFO    | STEP 01 | Loading footpath legend color
+2026-04-02 21:06:38 | INFO    | STEP 01 | Footpath RGB from legend: (204, 204, 204)
+2026-04-02 21:06:38 | INFO    | STEP 02 | Rendering PDF page at 300 DPI
+2026-04-02 21:06:39 | INFO    | STEP 03 | Building raw RGB-distance mask
+2026-04-02 21:06:39 | INFO    | STEP 04 | Removing page furniture regions
+2026-04-02 21:06:39 | INFO    | STEP 04 | Removed legend block px bbox=(58,39,1320,1247)
+2026-04-02 21:06:39 | INFO    | STEP 04 | Removed title strip height=273 px
+2026-04-02 21:06:39 | INFO    | STEP 05 | Connected-components analysis
+2026-04-02 21:06:39 | INFO    | STEP 05 | Components found (excluding background): 48
+2026-04-02 21:06:39 | INFO    | STEP 05B | Seed mask mode=raw (from cleaned raw color mask)
+2026-04-02 21:06:39 | INFO    | STEP 06 | Rendering baseline magenta overlay
+2026-04-02 21:06:40 | INFO    | STEP 07 | Building non-surface overlap mask
+2026-04-02 21:06:40 | INFO    | STEP 08 | Resolving overlaps and healing strip continuity
+2026-04-02 21:06:40 | INFO    | STEP 08B | Corridor continuity enforcement
+2026-04-02 21:06:40 | INFO    | STEP 09 | Polygon preview from resolved mask
+2026-04-02 21:06:40 | INFO    | STEP 10 | Writing diagnostics JSON
+2026-04-02 21:06:40 | INFO    | STEP 11 | Done. Selected components=33 polygons=2
+2026-04-02 21:06:40 | INFO    | STEP 11 | JSON: outputs\footpath_pixel_pipeline\footpath_pixel_pipeline.json
+2026-04-02 21:12:11 | INFO    | STEP 01 | Loading footpath legend color
+2026-04-02 21:12:11 | INFO    | STEP 01 | Footpath RGB from legend: (204, 204, 204)
+2026-04-02 21:12:11 | INFO    | STEP 02 | Rendering PDF page at 300 DPI
+2026-04-02 21:12:12 | INFO    | STEP 03 | Building raw RGB-distance mask
+2026-04-02 21:12:12 | INFO    | STEP 04 | Removing page furniture regions
+2026-04-02 21:12:12 | INFO    | STEP 04 | Removed legend block px bbox=(58,39,1320,1247)
+2026-04-02 21:12:12 | INFO    | STEP 04 | Removed title strip height=273 px
+2026-04-02 21:12:12 | INFO    | STEP 05 | Connected-components analysis
+2026-04-02 21:12:12 | INFO    | STEP 05 | Components found (excluding background): 48
+2026-04-02 21:12:13 | INFO    | STEP 05B | Seed mask mode=raw (from cleaned raw color mask)
+2026-04-02 21:12:13 | INFO    | STEP 06 | Rendering baseline magenta overlay
+2026-04-02 21:12:13 | INFO    | STEP 07 | Building non-surface overlap mask
+2026-04-02 21:12:13 | INFO    | STEP 08 | Resolving overlaps and healing strip continuity
+2026-04-02 21:12:13 | INFO    | STEP 08C | Width-aware path reconstruction from resolved mask
+2026-04-02 21:12:13 | INFO    | STEP 08C | Estimated half-width=5 px
+2026-04-02 21:12:13 | INFO    | STEP 08B | Corridor continuity enforcement
+2026-04-02 21:12:13 | INFO    | STEP 09 | Polygon preview from resolved mask
+2026-04-02 21:12:14 | INFO    | STEP 10 | Writing diagnostics JSON
+2026-04-02 21:12:14 | INFO    | STEP 11 | Done. Selected components=33 polygons=3
+2026-04-02 21:12:14 | INFO    | STEP 11 | JSON: outputs\footpath_pixel_pipeline\footpath_pixel_pipeline.json
+2026-04-02 21:17:15 | INFO    | STEP 01 | Loading footpath legend color
+2026-04-02 21:17:15 | INFO    | STEP 01 | Footpath RGB from legend: (204, 204, 204)
+2026-04-02 21:17:15 | INFO    | STEP 02 | Rendering PDF page at 300 DPI
+2026-04-02 21:17:16 | INFO    | STEP 03 | Building raw RGB-distance mask
+2026-04-02 21:17:16 | INFO    | STEP 04 | Removing page furniture regions
+2026-04-02 21:17:16 | INFO    | STEP 04 | Removed legend block px bbox=(58,39,1320,1247)
+2026-04-02 21:17:16 | INFO    | STEP 04 | Removed title strip height=273 px
+2026-04-02 21:17:16 | INFO    | STEP 05 | Connected-components analysis
+2026-04-02 21:17:16 | INFO    | STEP 05 | Components found (excluding background): 48
+2026-04-02 21:17:16 | INFO    | STEP 05B | Seed mask mode=raw (from cleaned raw color mask)
+2026-04-02 21:17:16 | INFO    | STEP 06 | Rendering baseline magenta overlay
+2026-04-02 21:17:17 | INFO    | STEP 07 | Building non-surface overlap mask
+2026-04-02 21:17:17 | INFO    | STEP 08 | Resolving overlaps and healing strip continuity
+2026-04-02 21:17:17 | INFO    | STEP 08C | Width-aware path reconstruction from resolved mask
+2026-04-02 21:17:17 | INFO    | STEP 08C | Estimated half-width=5 px
+2026-04-02 21:17:17 | INFO    | STEP 08D | Centerline best-fit reconstruction from raw support
+2026-04-02 21:17:17 | INFO    | STEP 08D | Centerline half-width=5 px kept_components=0
+2026-04-02 21:17:17 | INFO    | STEP 08B | Corridor continuity enforcement
+2026-04-02 21:17:17 | INFO    | STEP 09 | Polygon preview from resolved mask
+2026-04-02 21:17:18 | INFO    | STEP 10 | Writing diagnostics JSON
+2026-04-02 21:17:18 | INFO    | STEP 11 | Done. Selected components=33 polygons=3
+2026-04-02 21:17:18 | INFO    | STEP 11 | JSON: outputs\footpath_pixel_pipeline\footpath_pixel_pipeline.json
+2026-04-02 21:17:56 | INFO    | STEP 01 | Loading footpath legend color
+2026-04-02 21:17:56 | INFO    | STEP 01 | Footpath RGB from legend: (204, 204, 204)
+2026-04-02 21:17:56 | INFO    | STEP 02 | Rendering PDF page at 300 DPI
+2026-04-02 21:17:57 | INFO    | STEP 03 | Building raw RGB-distance mask
+2026-04-02 21:17:57 | INFO    | STEP 04 | Removing page furniture regions
+2026-04-02 21:17:57 | INFO    | STEP 04 | Removed legend block px bbox=(58,39,1320,1247)
+2026-04-02 21:17:57 | INFO    | STEP 04 | Removed title strip height=273 px
+2026-04-02 21:17:57 | INFO    | STEP 05 | Connected-components analysis
+2026-04-02 21:17:57 | INFO    | STEP 05 | Components found (excluding background): 48
+2026-04-02 21:17:58 | INFO    | STEP 05B | Seed mask mode=raw (from cleaned raw color mask)
+2026-04-02 21:17:58 | INFO    | STEP 06 | Rendering baseline magenta overlay
+2026-04-02 21:17:58 | INFO    | STEP 07 | Building non-surface overlap mask
+2026-04-02 21:17:58 | INFO    | STEP 08 | Resolving overlaps and healing strip continuity
+2026-04-02 21:17:58 | INFO    | STEP 08C | Width-aware path reconstruction from resolved mask
+2026-04-02 21:17:58 | INFO    | STEP 08C | Estimated half-width=5 px
+2026-04-02 21:17:58 | INFO    | STEP 08D | Centerline best-fit reconstruction from raw support
+2026-04-02 21:17:58 | INFO    | STEP 08D | Centerline half-width=6 px kept_components=1
+2026-04-02 21:17:58 | INFO    | STEP 08B | Corridor continuity enforcement
+2026-04-02 21:17:59 | INFO    | STEP 09 | Polygon preview from resolved mask
+2026-04-02 21:17:59 | INFO    | STEP 10 | Writing diagnostics JSON
+2026-04-02 21:17:59 | INFO    | STEP 11 | Done. Selected components=33 polygons=3
+2026-04-02 21:17:59 | INFO    | STEP 11 | JSON: outputs\footpath_pixel_pipeline\footpath_pixel_pipeline.json
+2026-04-03 10:22:18 | INFO    | STEP 01 | Loading footpath legend color
+2026-04-03 10:22:18 | INFO    | STEP 01 | Footpath RGB from legend: (204, 204, 204)
+2026-04-03 10:22:18 | INFO    | STEP 02 | Rendering PDF page at 300 DPI
+2026-04-03 10:22:19 | INFO    | STEP 03 | Building raw RGB-distance mask
+2026-04-03 10:22:19 | INFO    | STEP 04 | Removing page furniture regions
+2026-04-03 10:22:19 | INFO    | STEP 04 | Removed legend block px bbox=(58,39,1320,1247)
+2026-04-03 10:22:19 | INFO    | STEP 04 | Removed title strip height=273 px
+2026-04-03 10:22:19 | INFO    | STEP 05 | Connected-components analysis
+2026-04-03 10:22:19 | INFO    | STEP 05 | Components found (excluding background): 48
+2026-04-03 10:22:19 | INFO    | STEP 05B | Seed mask mode=raw (from cleaned raw color mask)
+2026-04-03 10:22:19 | INFO    | STEP 06 | Rendering baseline magenta overlay
+2026-04-03 10:22:19 | INFO    | STEP 07 | Building non-surface overlap mask
+2026-04-03 10:22:19 | INFO    | STEP 08 | Resolving overlaps and healing strip continuity
+2026-04-03 10:22:20 | INFO    | STEP 08C | Width-aware path reconstruction from resolved mask
+2026-04-03 10:22:20 | INFO    | STEP 08C | Estimated half-width=5 px
+2026-04-03 10:22:20 | INFO    | STEP 08D | Centerline best-fit reconstruction from raw support
+2026-04-03 10:22:20 | INFO    | STEP 08G | Geodesic linking of broken centerline components
+2026-04-03 10:22:20 | INFO    | STEP 08D | Centerline half-width=6 px kept_components=1
+2026-04-03 10:22:20 | INFO    | STEP 08B | Corridor continuity enforcement
+2026-04-03 10:22:20 | INFO    | STEP 09 | Polygon preview from resolved mask
+2026-04-03 10:22:20 | INFO    | STEP 10 | Writing diagnostics JSON
+2026-04-03 10:22:20 | INFO    | STEP 11 | Done. Selected components=33 polygons=3
+2026-04-03 10:22:20 | INFO    | STEP 11 | JSON: outputs\footpath_pixel_pipeline\footpath_pixel_pipeline.json
+2026-04-03 10:23:35 | INFO    | STEP 01 | Loading footpath legend color
+2026-04-03 10:23:35 | INFO    | STEP 01 | Footpath RGB from legend: (204, 204, 204)
+2026-04-03 10:23:35 | INFO    | STEP 02 | Rendering PDF page at 300 DPI
+2026-04-03 10:23:35 | INFO    | STEP 03 | Building raw RGB-distance mask
+2026-04-03 10:23:36 | INFO    | STEP 04 | Removing page furniture regions
+2026-04-03 10:23:36 | INFO    | STEP 04 | Removed legend block px bbox=(58,39,1320,1247)
+2026-04-03 10:23:36 | INFO    | STEP 04 | Removed title strip height=273 px
+2026-04-03 10:23:36 | INFO    | STEP 05 | Connected-components analysis
+2026-04-03 10:23:36 | INFO    | STEP 05 | Components found (excluding background): 48
+2026-04-03 10:23:36 | INFO    | STEP 05B | Seed mask mode=raw (from cleaned raw color mask)
+2026-04-03 10:23:36 | INFO    | STEP 06 | Rendering baseline magenta overlay
+2026-04-03 10:23:36 | INFO    | STEP 07 | Building non-surface overlap mask
+2026-04-03 10:23:36 | INFO    | STEP 08 | Resolving overlaps and healing strip continuity
+2026-04-03 10:23:36 | INFO    | STEP 08C | Width-aware path reconstruction from resolved mask
+2026-04-03 10:23:36 | INFO    | STEP 08C | Estimated half-width=5 px
+2026-04-03 10:23:36 | INFO    | STEP 08D | Centerline best-fit reconstruction from raw support
+2026-04-03 10:23:37 | INFO    | STEP 08G | Geodesic linking of broken centerline components
+2026-04-03 10:23:45 | INFO    | STEP 08D | Centerline half-width=2 px kept_components=1
+2026-04-03 10:23:45 | INFO    | STEP 08B | Corridor continuity enforcement
+2026-04-03 10:23:45 | INFO    | STEP 09 | Polygon preview from resolved mask
+2026-04-03 10:23:46 | INFO    | STEP 10 | Writing diagnostics JSON
+2026-04-03 10:23:46 | INFO    | STEP 11 | Done. Selected components=33 polygons=3
+2026-04-03 10:23:46 | INFO    | STEP 11 | JSON: outputs\footpath_pixel_pipeline\footpath_pixel_pipeline.json
+2026-04-03 10:37:19 | INFO    | STEP 01 | Loading footpath legend color
+2026-04-03 10:37:19 | INFO    | STEP 01 | Footpath RGB from legend: (204, 204, 204)
+2026-04-03 10:37:19 | INFO    | STEP 02 | Rendering PDF page at 300 DPI
+2026-04-03 10:37:19 | INFO    | STEP 03 | Building raw RGB-distance mask
+2026-04-03 10:37:19 | INFO    | STEP 04 | Removing page furniture regions
+2026-04-03 10:37:19 | INFO    | STEP 04 | Removed legend block px bbox=(58,39,1320,1247)
+2026-04-03 10:37:19 | INFO    | STEP 04 | Removed title strip height=273 px
+2026-04-03 10:37:20 | INFO    | STEP 05 | Connected-components analysis
+2026-04-03 10:37:20 | INFO    | STEP 05 | Components found (excluding background): 48
+2026-04-03 10:37:20 | INFO    | STEP 05B | Seed mask mode=raw (from cleaned raw color mask)
+2026-04-03 10:37:20 | INFO    | STEP 06 | Rendering baseline magenta overlay
+2026-04-03 10:37:20 | INFO    | STEP 07 | Building non-surface overlap mask
+2026-04-03 10:37:20 | INFO    | STEP 08 | Resolving overlaps and healing strip continuity
+2026-04-03 10:37:20 | INFO    | STEP 08C | Width-aware path reconstruction from resolved mask
+2026-04-03 10:37:20 | INFO    | STEP 08C | Estimated half-width=5 px
+2026-04-03 10:37:20 | INFO    | STEP 08D | Centerline best-fit reconstruction from raw support
+2026-04-03 10:37:20 | INFO    | STEP 08G | Geodesic linking of broken centerline components
+2026-04-03 10:37:22 | INFO    | STEP 08D | Centerline half-width=2 px kept_components=1
+2026-04-03 10:37:22 | INFO    | STEP 08B | Corridor continuity enforcement
+2026-04-03 10:37:22 | INFO    | STEP 09 | Polygon preview from resolved mask
+2026-04-03 10:37:22 | INFO    | STEP 10 | Writing diagnostics JSON
+2026-04-03 10:37:22 | INFO    | STEP 11 | Done. Selected components=33 polygons=3
+2026-04-03 10:37:22 | INFO    | STEP 11 | JSON: outputs\footpath_pixel_pipeline\footpath_pixel_pipeline.json

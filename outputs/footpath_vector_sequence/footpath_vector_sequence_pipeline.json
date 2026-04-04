@@ -1,0 +1,40 @@
+{
+  "source_pdf": "examples\\Joal 502.pdf",
+  "page": 1,
+  "dpi": 300,
+  "footpath_color_norm": [
+    0.800000011920929,
+    0.800000011920929,
+    0.800000011920929
+  ],
+  "params": {
+    "color_threshold": 0.035,
+    "max_candidate_thickness_pt": 8.0,
+    "min_candidate_span_pt": 5.0,
+    "bridge_kernel": 11,
+    "min_component_area": 200
+  },
+  "counts": {
+    "drawings_total": 5870,
+    "candidate_draw_matches": 655,
+    "overlay_draw_matches": 37,
+    "connected_components": 3,
+    "polygons": 1,
+    "final_pixel_count": 27189
+  },
+  "aoi": {
+    "x0": 322,
+    "y0": 351,
+    "x1": 3065,
+    "y1": 2235
+  },
+  "artifacts": {
+    "stage_01_page": "outputs\\footpath_vector_sequence\\visualizations\\stage_01_page.png",
+    "stage_02_aoi_mask": "outputs\\footpath_vector_sequence\\visualizations\\stage_02_aoi_mask.png",
+    "stage_03_vector_candidate_mask": "outputs\\footpath_vector_sequence\\visualizations\\stage_03_vector_candidate_mask.png",
+    "stage_04_overlay_mask": "outputs\\footpath_vector_sequence\\visualizations\\stage_04_overlay_mask.png",
+    "stage_05_resolved_mask": "outputs\\footpath_vector_sequence\\visualizations\\stage_05_resolved_mask.png",
+    "stage_06_final_mask": "outputs\\footpath_vector_sequence\\visualizations\\stage_06_final_mask.png",
+    "stage_07_polygon_preview": "outputs\\footpath_vector_sequence\\visualizations\\stage_07_polygon_preview.png"
+  }
+}

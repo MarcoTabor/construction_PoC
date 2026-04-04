@@ -1,0 +1,98 @@
+{
+  "run_started_utc": "2026-04-02T06:45:41.282712+00:00",
+  "run_finished_utc": "2026-04-02T06:45:41.650487+00:00",
+  "source_pdf": "examples\\Joal 502.pdf",
+  "total_pages": 1,
+  "processed_pages": 1,
+  "page_stats": [
+    {
+      "page": 1,
+      "width": 841.8897705078125,
+      "height": 595.2755737304688,
+      "word_count": 434,
+      "text_line_count": 262,
+      "drawing_count": 5870,
+      "keyword_hit_count": 12,
+      "scale_candidate_count": 2,
+      "legend_entry_count": 2
+    }
+  ],
+  "scale_candidates": [
+    {
+      "page": 1,
+      "text": "DIMENSIONS MUST\nNOT\nBE\nSCALE\nMEASURED\nFROM\nTHESE\nDRAWINGS.",
+      "bbox": [
+        464.8359069824219,
+        555.0982666015625,
+        553.9483642578125,
+        558.1332397460938
+      ]
+    },
+    {
+      "page": 1,
+      "text": "A3 Scale\n1:",
+      "bbox": [
+        249.1105499267578,
+        550.1495361328125,
+        270.0594482421875,
+        555.16357421875
+      ]
+    }
+  ],
+  "legend_regions": {
+    "1": {
+      "source": "legend_heading",
+      "bbox": [
+        16.241191864013672,
+        11.762176513671875,
+        314.2915916442871,
+        256.7761764526367
+      ]
+    }
+  },
+  "legend_entries": [
+    {
+      "page": 1,
+      "feature_type": "concrete",
+      "text": "305\u00d8 CONC",
+      "x0": 218.99661254882812,
+      "y0": 221.63983154296875,
+      "x1": 242.1106719970703,
+      "y1": 236.3258056640625
+    },
+    {
+      "page": 1,
+      "feature_type": "footpath",
+      "text": "PROPOSED FOOTPATH",
+      "x0": 80.51982879638672,
+      "y0": 135.20095825195312,
+      "x1": 127.16667175292969,
+      "y1": 140.2149658203125
+    }
+  ],
+  "feature_summary": {
+    "concrete": {
+      "hit_count": 10,
+      "linked_count": 5,
+      "avg_link_score": 0.9619,
+      "length_proxy_sum": 230.006
+    },
+    "footpath": {
+      "hit_count": 2,
+      "linked_count": 1,
+      "avg_link_score": 0.6833,
+      "length_proxy_sum": 0.0
+    }
+  },
+  "counts": {
+    "text_hits": 12,
+    "drawing_candidates": 5870,
+    "linked_hits": 6,
+    "unlinked_hits": 6,
+    "legend_symbol_links": 2
+  },
+  "notes": [
+    "length_proxy_sum is a pilot metric based on linked drawing path segments, not final engineering quantity.",
+    "Area/volume calculations are intentionally deferred until polygon closure and unit calibration are added."
+  ]
+}

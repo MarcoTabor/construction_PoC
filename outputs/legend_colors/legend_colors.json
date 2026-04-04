@@ -1,0 +1,325 @@
+{
+  "run_started_utc": "2026-04-02T07:35:39.293128+00:00",
+  "run_finished_utc": "2026-04-02T07:35:39.478411+00:00",
+  "source_pdf": "examples\\Joal 502.pdf",
+  "page": 1,
+  "legend_region_bbox": [
+    16.241191864013672,
+    11.762176513671875,
+    314.2915916442871,
+    296.7761764526367
+  ],
+  "legend_entries": [
+    {
+      "label": "PROPOSED LOT\nBOUNDARY",
+      "label_bbox": [
+        80.51982879638672,
+        45.440338134765625,
+        137.3002166748047,
+        50.45433807373047
+      ],
+      "status": "no_swatch_found"
+    },
+    {
+      "label": "PROPOSED CONTOUR\nMINOR",
+      "label_bbox": [
+        80.51982879638672,
+        51.442108154296875,
+        140.606201171875,
+        56.45610809326172
+      ],
+      "status": "no_swatch_found"
+    },
+    {
+      "label": "PROPOSED CONTOUR\nMAJOR",
+      "label_bbox": [
+        80.51982879638672,
+        57.438812255859375,
+        141.086181640625,
+        62.45281219482422
+      ],
+      "status": "no_swatch_found"
+    },
+    {
+      "label": "PROPOSED STORMWATER\nPIPE",
+      "label_bbox": [
+        80.63514709472656,
+        81.32052612304688,
+        145.15850830078125,
+        86.33452606201172
+      ],
+      "status": "no_swatch_found"
+    },
+    {
+      "label": "PROPOSED STORMWATER\nMANHOLE",
+      "label_bbox": [
+        80.63514709472656,
+        87.3172607421875,
+        156.21539306640625,
+        92.33126068115234
+      ],
+      "status": "no_swatch_found"
+    },
+    {
+      "label": "PROPOSED STORMWATER\nCATCHPIT",
+      "label_bbox": [
+        80.63514709472656,
+        93.31903076171875,
+        156.46473693847656,
+        98.3330307006836
+      ],
+      "status": "no_swatch_found"
+    },
+    {
+      "label": "PROPOSED STORMWATER\nOUTFALL",
+      "label_bbox": [
+        80.63514709472656,
+        99.32080078125,
+        154.3256072998047,
+        104.33480072021484
+      ],
+      "status": "no_swatch_found"
+    },
+    {
+      "label": "PROPOSED ROCKLINED\nDRAIN",
+      "label_bbox": [
+        80.63514709472656,
+        105.31753540039062,
+        142.92745971679688,
+        110.33153533935547
+      ],
+      "status": "ok",
+      "swatch": {
+        "drawing_index": 5733,
+        "bbox": [
+          36.2400016784668,
+          105.47958374023438,
+          76.55999755859375,
+          109.4395751953125
+        ],
+        "fill": [
+          0.6469978094100952,
+          0.32199588418006897,
+          0.48599985241889954
+        ],
+        "stroke": null,
+        "fill_rgb255": [
+          165,
+          82,
+          124
+        ],
+        "stroke_rgb255": null,
+        "fill_hex": "#A5527C",
+        "stroke_hex": null,
+        "match_score": 4.2576
+      }
+    },
+    {
+      "label": "PROPOSED FLOW\nPATH",
+      "label_bbox": [
+        80.63514709472656,
+        111.31927490234375,
+        128.96194458007812,
+        116.3332748413086
+      ],
+      "status": "no_swatch_found"
+    },
+    {
+      "label": "PROPOSED SEAL",
+      "label_bbox": [
+        80.51982879638672,
+        123.19747924804688,
+        115.44513702392578,
+        128.21148681640625
+      ],
+      "status": "ok",
+      "swatch": {
+        "drawing_index": 5847,
+        "bbox": [
+          36.720001220703125,
+          123.35958862304688,
+          76.55999755859375,
+          127.319580078125
+        ],
+        "fill": [
+          0.3609979450702667,
+          0.3609979450702667,
+          0.3609979450702667
+        ],
+        "stroke": null,
+        "fill_rgb255": [
+          92,
+          92,
+          92
+        ],
+        "stroke_rgb255": null,
+        "fill_hex": "#5C5C5C",
+        "stroke_hex": null,
+        "match_score": 4.1423
+      }
+    },
+    {
+      "label": "PROPOSED JOAL",
+      "label_bbox": [
+        80.51982879638672,
+        129.19921875,
+        115.08514404296875,
+        134.21322631835938
+      ],
+      "status": "ok",
+      "swatch": {
+        "drawing_index": 5853,
+        "bbox": [
+          36.720001220703125,
+          129.35958862304688,
+          76.55999755859375,
+          133.319580078125
+        ],
+        "fill": [
+          0.6779888868331909,
+          0.6779888868331909,
+          0.6779888868331909
+        ],
+        "stroke": null,
+        "fill_rgb255": [
+          173,
+          173,
+          173
+        ],
+        "stroke_rgb255": null,
+        "fill_hex": "#ADADAD",
+        "stroke_hex": null,
+        "match_score": 4.1432
+      }
+    },
+    {
+      "label": "PROPOSED FOOTPATH",
+      "label_bbox": [
+        80.51982879638672,
+        135.20095825195312,
+        127.16667175292969,
+        140.2149658203125
+      ],
+      "status": "ok",
+      "swatch": {
+        "drawing_index": 5856,
+        "bbox": [
+          36.720001220703125,
+          135.35958862304688,
+          76.55999755859375,
+          139.319580078125
+        ],
+        "fill": [
+          0.800000011920929,
+          0.800000011920929,
+          0.800000011920929
+        ],
+        "stroke": null,
+        "fill_rgb255": [
+          204,
+          204,
+          204
+        ],
+        "stroke_rgb255": null,
+        "fill_hex": "#CCCCCC",
+        "stroke_hex": null,
+        "match_score": 4.144
+      }
+    }
+  ],
+  "color_search_counts": [
+    {
+      "label": "PROPOSED ROCKLINED\nDRAIN",
+      "fill_hex": "#A5527C",
+      "stroke_hex": null,
+      "threshold": 0.03,
+      "fill_hits": 1,
+      "stroke_hits": 0,
+      "matched_object_count": 1
+    },
+    {
+      "label": "PROPOSED SEAL",
+      "fill_hex": "#5C5C5C",
+      "stroke_hex": null,
+      "threshold": 0.03,
+      "fill_hits": 1,
+      "stroke_hits": 0,
+      "matched_object_count": 1
+    },
+    {
+      "label": "PROPOSED JOAL",
+      "fill_hex": "#ADADAD",
+      "stroke_hex": null,
+      "threshold": 0.03,
+      "fill_hits": 192,
+      "stroke_hits": 0,
+      "matched_object_count": 192
+    },
+    {
+      "label": "PROPOSED FOOTPATH",
+      "fill_hex": "#CCCCCC",
+      "stroke_hex": null,
+      "threshold": 0.03,
+      "fill_hits": 712,
+      "stroke_hits": 0,
+      "matched_object_count": 712
+    }
+  ],
+  "region_params": {
+    "region_gap": 1.5,
+    "min_region_boxes": 6,
+    "max_highlight_area_ratio": 0.02
+  },
+  "region_summary": {
+    "PROPOSED FOOTPATH": {
+      "matched_boxes": 712,
+      "kept_boxes": 712,
+      "skipped_large": 0,
+      "clusters_raw": 2,
+      "clusters_kept": 1,
+      "cluster_envelopes": [
+        [
+          101.87999725341797,
+          101.39956665039062,
+          710.4000244140625,
+          518.6395874023438
+        ]
+      ],
+      "micro_highlight_image": "outputs\\legend_colors\\visualizations\\page_legend_highlight_proposed_footpath.png",
+      "region_highlight_image": "outputs\\legend_colors\\visualizations\\page_legend_regions_proposed_footpath.png"
+    },
+    "PROPOSED JOAL": {
+      "matched_boxes": 192,
+      "kept_boxes": 168,
+      "skipped_large": 24,
+      "clusters_raw": 3,
+      "clusters_kept": 2,
+      "cluster_envelopes": [
+        [
+          106.91999816894531,
+          249.59957885742188,
+          281.0400085449219,
+          518.6395874023438
+        ],
+        [
+          392.0400085449219,
+          106.5595703125,
+          705.3599853515625,
+          518.6395874023438
+        ]
+      ],
+      "micro_highlight_image": "outputs\\legend_colors\\visualizations\\page_legend_highlight_proposed_joal.png",
+      "region_highlight_image": "outputs\\legend_colors\\visualizations\\page_legend_regions_proposed_joal.png"
+    },
+    "PROPOSED SEAL": {
+      "matched_boxes": 1,
+      "kept_boxes": 1,
+      "skipped_large": 0,
+      "clusters_raw": 1,
+      "clusters_kept": 0,
+      "cluster_envelopes": [],
+      "micro_highlight_image": "outputs\\legend_colors\\visualizations\\page_legend_highlight_proposed_seal.png",
+      "region_highlight_image": "outputs\\legend_colors\\visualizations\\page_legend_regions_proposed_seal.png"
+    }
+  }
+}

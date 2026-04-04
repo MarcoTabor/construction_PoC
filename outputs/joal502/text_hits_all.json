@@ -1,0 +1,122 @@
+[
+  {
+    "page": 1,
+    "keyword": "\\bconc\\b",
+    "feature_type": "concrete",
+    "text": "CONC",
+    "x0": 87.54684448242188,
+    "y0": 418.5541687011719,
+    "x1": 92.71900177001953,
+    "y1": 430.8252868652344
+  },
+  {
+    "page": 1,
+    "keyword": "\\bconc\\b",
+    "feature_type": "concrete",
+    "text": "CONC",
+    "x0": 714.0345458984375,
+    "y0": 403.2949523925781,
+    "x1": 719.0537719726562,
+    "y1": 415.3867492675781
+  },
+  {
+    "page": 1,
+    "keyword": "\\bconc\\b",
+    "feature_type": "concrete",
+    "text": "CONC",
+    "x0": 136.8427276611328,
+    "y0": 317.7104797363281,
+    "x1": 149.48863220214844,
+    "y1": 323.8153076171875
+  },
+  {
+    "page": 1,
+    "keyword": "\\bconc\\b",
+    "feature_type": "concrete",
+    "text": "CONC",
+    "x0": 229.07861328125,
+    "y0": 221.63983154296875,
+    "x1": 242.1106719970703,
+    "y1": 231.40908813476562
+  },
+  {
+    "page": 1,
+    "keyword": "\\bconc\\b",
+    "feature_type": "concrete",
+    "text": "CONC",
+    "x0": 695.9714965820312,
+    "y0": 191.123779296875,
+    "x1": 705.09130859375,
+    "y1": 204.2495880126953
+  },
+  {
+    "page": 1,
+    "keyword": "\\bfootpath\\b",
+    "feature_type": "footpath",
+    "text": "FOOTPATH",
+    "x0": 104.89338684082031,
+    "y0": 135.20095825195312,
+    "x1": 127.16667175292969,
+    "y1": 140.2149658203125
+  },
+  {
+    "page": 1,
+    "keyword": "line_fallback",
+    "feature_type": "concrete",
+    "text": "CONC",
+    "x0": -1.0,
+    "y0": -1.0,
+    "x1": -1.0,
+    "y1": -1.0
+  },
+  {
+    "page": 1,
+    "keyword": "line_fallback",
+    "feature_type": "concrete",
+    "text": "CONC",
+    "x0": -1.0,
+    "y0": -1.0,
+    "x1": -1.0,
+    "y1": -1.0
+  },
+  {
+    "page": 1,
+    "keyword": "line_fallback",
+    "feature_type": "concrete",
+    "text": "CONC",
+    "x0": -1.0,
+    "y0": -1.0,
+    "x1": -1.0,
+    "y1": -1.0
+  },
+  {
+    "page": 1,
+    "keyword": "line_fallback",
+    "feature_type": "concrete",
+    "text": "CONC",
+    "x0": -1.0,
+    "y0": -1.0,
+    "x1": -1.0,
+    "y1": -1.0
+  },
+  {
+    "page": 1,
+    "keyword": "line_fallback",
+    "feature_type": "concrete",
+    "text": "CONC",
+    "x0": -1.0,
+    "y0": -1.0,
+    "x1": -1.0,
+    "y1": -1.0
+  },
+  {
+    "page": 1,
+    "keyword": "line_fallback",
+    "feature_type": "footpath",
+    "text": "FOOTPATH",
+    "x0": -1.0,
+    "y0": -1.0,
+    "x1": -1.0,
+    "y1": -1.0
+  }
+]

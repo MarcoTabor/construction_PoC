@@ -1,0 +1,350 @@
+[
+  {
+    "hit": {
+      "page": 1,
+      "keyword": "\\bconc\\b",
+      "feature_type": "concrete",
+      "text": "CONC",
+      "x0": 87.54684448242188,
+      "y0": 418.5541687011719,
+      "x1": 92.71900177001953,
+      "y1": 430.8252868652344
+    },
+    "linked_drawing_id": "p1_d4954",
+    "distance": 4.278921838330238,
+    "score": 0.959,
+    "link_status": "linked",
+    "reason": "nearest_bbox_center",
+    "drawing": {
+      "drawing_id": "p1_d4954",
+      "page": 1,
+      "bbox": [
+        86.4000015258789,
+        416.3995666503906,
+        100.31999969482422,
+        438.59954833984375
+      ],
+      "stroke_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "fill_color": null,
+      "width": 0.11999999731779099,
+      "line_cap": [
+        1,
+        1,
+        1
+      ],
+      "line_join": 0.11999999731779099,
+      "path_length_proxy": 58.748116931739276
+    }
+  },
+  {
+    "hit": {
+      "page": 1,
+      "keyword": "\\bconc\\b",
+      "feature_type": "concrete",
+      "text": "CONC",
+      "x0": 714.0345458984375,
+      "y0": 403.2949523925781,
+      "x1": 719.0537719726562,
+      "y1": 415.3867492675781
+    },
+    "linked_drawing_id": "p1_d5066",
+    "distance": 4.185330640340107,
+    "score": 0.9598,
+    "link_status": "linked",
+    "reason": "nearest_bbox_center",
+    "drawing": {
+      "drawing_id": "p1_d5066",
+      "page": 1,
+      "bbox": [
+        712.7999877929688,
+        400.799560546875,
+        726.719970703125,
+        423.23956298828125
+      ],
+      "stroke_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "fill_color": null,
+      "width": 0.11999999731779099,
+      "line_cap": [
+        1,
+        1,
+        1
+      ],
+      "line_join": 0.11999999731779099,
+      "path_length_proxy": 59.16590620817193
+    }
+  },
+  {
+    "hit": {
+      "page": 1,
+      "keyword": "\\bconc\\b",
+      "feature_type": "concrete",
+      "text": "CONC",
+      "x0": 136.8427276611328,
+      "y0": 317.7104797363281,
+      "x1": 149.48863220214844,
+      "y1": 323.8153076171875
+    },
+    "linked_drawing_id": "p1_d5192",
+    "distance": 4.078195955722099,
+    "score": 0.9608,
+    "link_status": "linked",
+    "reason": "nearest_bbox_center",
+    "drawing": {
+      "drawing_id": "p1_d5192",
+      "page": 1,
+      "bbox": [
+        128.39999389648438,
+        319.1995544433594,
+        154.3199920654297,
+        329.6395568847656
+      ],
+      "stroke_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "fill_color": null,
+      "width": 0.11999999731779099,
+      "line_cap": [
+        1,
+        1,
+        1
+      ],
+      "line_join": 0.11999999731779099,
+      "path_length_proxy": 56.02545529039604
+    }
+  },
+  {
+    "hit": {
+      "page": 1,
+      "keyword": "\\bconc\\b",
+      "feature_type": "concrete",
+      "text": "CONC",
+      "x0": 229.07861328125,
+      "y0": 221.63983154296875,
+      "x1": 242.1106719970703,
+      "y1": 231.40908813476562
+    },
+    "linked_drawing_id": "p1_d5253",
+    "distance": 2.778292597741821,
+    "score": 0.973,
+    "link_status": "linked",
+    "reason": "nearest_bbox_center",
+    "drawing": {
+      "drawing_id": "p1_d5253",
+      "page": 1,
+      "bbox": [
+        223.67999267578125,
+        219.71957397460938,
+        245.27999877929688,
+        228.23956298828125
+      ],
+      "stroke_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "fill_color": null,
+      "width": 0.11999999731779099,
+      "line_cap": [
+        1,
+        1,
+        1
+      ],
+      "line_join": 0.11999999731779099,
+      "path_length_proxy": 46.484170554846536
+    }
+  },
+  {
+    "hit": {
+      "page": 1,
+      "keyword": "\\bconc\\b",
+      "feature_type": "concrete",
+      "text": "CONC",
+      "x0": 695.9714965820312,
+      "y0": 191.123779296875,
+      "x1": 705.09130859375,
+      "y1": 204.2495880126953
+    },
+    "linked_drawing_id": "p1_d1645",
+    "distance": 4.526425218493069,
+    "score": 0.9567,
+    "link_status": "linked",
+    "reason": "nearest_bbox_center",
+    "drawing": {
+      "drawing_id": "p1_d1645",
+      "page": 1,
+      "bbox": [
+        694.5599975585938,
+        199.31956481933594,
+        699.0,
+        201.11956787109375
+      ],
+      "stroke_color": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929
+      ],
+      "fill_color": null,
+      "width": 0.11999999731779099,
+      "line_cap": [
+        1,
+        1,
+        1
+      ],
+      "line_join": 0.11999999731779099,
+      "path_length_proxy": 9.58198991150187
+    }
+  },
+  {
+    "hit": {
+      "page": 1,
+      "keyword": "\\bfootpath\\b",
+      "feature_type": "footpath",
+      "text": "FOOTPATH",
+      "x0": 104.89338684082031,
+      "y0": 135.20095825195312,
+      "x1": 127.16667175292969,
+      "y1": 140.2149658203125
+    },
+    "linked_drawing_id": "p1_d5861",
+    "distance": 46.354951101802506,
+    "score": 0.6833,
+    "link_status": "linked",
+    "reason": "nearest_bbox_center",
+    "drawing": {
+      "drawing_id": "p1_d5861",
+      "page": 1,
+      "bbox": [
+        76.55999755859375,
+        113.39956665039062,
+        76.55999755859375,
+        113.39956665039062
+      ],
+      "stroke_color": [
+        0.0,
+        0.49799343943595886,
+        0.0
+      ],
+      "fill_color": null,
+      "width": 0.47999998927116394,
+      "line_cap": [
+        1,
+        1,
+        1
+      ],
+      "line_join": 0.11999999731779099,
+      "path_length_proxy": 0.0
+    }
+  },
+  {
+    "hit": {
+      "page": 1,
+      "keyword": "line_fallback",
+      "feature_type": "concrete",
+      "text": "CONC",
+      "x0": -1.0,
+      "y0": -1.0,
+      "x1": -1.0,
+      "y1": -1.0
+    },
+    "linked_drawing_id": null,
+    "distance": null,
+    "score": 0.0,
+    "link_status": "unlinked",
+    "reason": "no_coordinates_or_no_drawings"
+  },
+  {
+    "hit": {
+      "page": 1,
+      "keyword": "line_fallback",
+      "feature_type": "concrete",
+      "text": "CONC",
+      "x0": -1.0,
+      "y0": -1.0,
+      "x1": -1.0,
+      "y1": -1.0
+    },
+    "linked_drawing_id": null,
+    "distance": null,
+    "score": 0.0,
+    "link_status": "unlinked",
+    "reason": "no_coordinates_or_no_drawings"
+  },
+  {
+    "hit": {
+      "page": 1,
+      "keyword": "line_fallback",
+      "feature_type": "concrete",
+      "text": "CONC",
+      "x0": -1.0,
+      "y0": -1.0,
+      "x1": -1.0,
+      "y1": -1.0
+    },
+    "linked_drawing_id": null,
+    "distance": null,
+    "score": 0.0,
+    "link_status": "unlinked",
+    "reason": "no_coordinates_or_no_drawings"
+  },
+  {
+    "hit": {
+      "page": 1,
+      "keyword": "line_fallback",
+      "feature_type": "concrete",
+      "text": "CONC",
+      "x0": -1.0,
+      "y0": -1.0,
+      "x1": -1.0,
+      "y1": -1.0
+    },
+    "linked_drawing_id": null,
+    "distance": null,
+    "score": 0.0,
+    "link_status": "unlinked",
+    "reason": "no_coordinates_or_no_drawings"
+  },
+  {
+    "hit": {
+      "page": 1,
+      "keyword": "line_fallback",
+      "feature_type": "concrete",
+      "text": "CONC",
+      "x0": -1.0,
+      "y0": -1.0,
+      "x1": -1.0,
+      "y1": -1.0
+    },
+    "linked_drawing_id": null,
+    "distance": null,
+    "score": 0.0,
+    "link_status": "unlinked",
+    "reason": "no_coordinates_or_no_drawings"
+  },
+  {
+    "hit": {
+      "page": 1,
+      "keyword": "line_fallback",
+      "feature_type": "footpath",
+      "text": "FOOTPATH",
+      "x0": -1.0,
+      "y0": -1.0,
+      "x1": -1.0,
+      "y1": -1.0
+    },
+    "linked_drawing_id": null,
+    "distance": null,
+    "score": 0.0,
+    "link_status": "unlinked",
+    "reason": "no_coordinates_or_no_drawings"
+  }
+]

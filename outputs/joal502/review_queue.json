@@ -1,0 +1,104 @@
+[
+  {
+    "hit": {
+      "page": 1,
+      "keyword": "line_fallback",
+      "feature_type": "concrete",
+      "text": "CONC",
+      "x0": -1.0,
+      "y0": -1.0,
+      "x1": -1.0,
+      "y1": -1.0
+    },
+    "linked_drawing_id": null,
+    "distance": null,
+    "score": 0.0,
+    "link_status": "unlinked",
+    "reason": "no_coordinates_or_no_drawings"
+  },
+  {
+    "hit": {
+      "page": 1,
+      "keyword": "line_fallback",
+      "feature_type": "concrete",
+      "text": "CONC",
+      "x0": -1.0,
+      "y0": -1.0,
+      "x1": -1.0,
+      "y1": -1.0
+    },
+    "linked_drawing_id": null,
+    "distance": null,
+    "score": 0.0,
+    "link_status": "unlinked",
+    "reason": "no_coordinates_or_no_drawings"
+  },
+  {
+    "hit": {
+      "page": 1,
+      "keyword": "line_fallback",
+      "feature_type": "concrete",
+      "text": "CONC",
+      "x0": -1.0,
+      "y0": -1.0,
+      "x1": -1.0,
+      "y1": -1.0
+    },
+    "linked_drawing_id": null,
+    "distance": null,
+    "score": 0.0,
+    "link_status": "unlinked",
+    "reason": "no_coordinates_or_no_drawings"
+  },
+  {
+    "hit": {
+      "page": 1,
+      "keyword": "line_fallback",
+      "feature_type": "concrete",
+      "text": "CONC",
+      "x0": -1.0,
+      "y0": -1.0,
+      "x1": -1.0,
+      "y1": -1.0
+    },
+    "linked_drawing_id": null,
+    "distance": null,
+    "score": 0.0,
+    "link_status": "unlinked",
+    "reason": "no_coordinates_or_no_drawings"
+  },
+  {
+    "hit": {
+      "page": 1,
+      "keyword": "line_fallback",
+      "feature_type": "concrete",
+      "text": "CONC",
+      "x0": -1.0,
+      "y0": -1.0,
+      "x1": -1.0,
+      "y1": -1.0
+    },
+    "linked_drawing_id": null,
+    "distance": null,
+    "score": 0.0,
+    "link_status": "unlinked",
+    "reason": "no_coordinates_or_no_drawings"
+  },
+  {
+    "hit": {
+      "page": 1,
+      "keyword": "line_fallback",
+      "feature_type": "footpath",
+      "text": "FOOTPATH",
+      "x0": -1.0,
+      "y0": -1.0,
+      "x1": -1.0,
+      "y1": -1.0
+    },
+    "linked_drawing_id": null,
+    "distance": null,
+    "score": 0.0,
+    "link_status": "unlinked",
+    "reason": "no_coordinates_or_no_drawings"
+  }
+]
