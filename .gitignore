@@ -7,3 +7,4 @@ __pycache__/
 *.pyc
 fix_*.py
 temp_vec.json
+!requirements.txt
