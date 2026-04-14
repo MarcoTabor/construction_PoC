@@ -82,7 +82,7 @@ class OrchRequest(BaseModel):
 @app.post("/api/orchestrator/next-step")
 async def get_next_step(req: OrchRequest):
     context_str = f" Context from document analysis: {json.dumps(req.analysis_context)}" if req.analysis_context else ""
-    prompt = f"The user was just on Step {req.current_step_id}. They performed the action: '{req.user_action}'.{context_str} Advance to the strictly next progressive engineering step as per the demo spec. Make sure to fix the active_canvas_image to start with / if it doesn't already. If confirming scope, use the boundary polygon from the context into the highlight_polygon field."
+    prompt = f"The user was just on Step {req.current_step_id}. They performed the action: '{req.user_action}'.{context_str} Advance to the strictly next progressive engineering step as per the demo spec. Make sure to fix the active_canvas_image to start with / if it doesn't already. If moving from Step 1 to Step 2 (confirming scope target), use the boundary polygon from the context into the highlight_polygon field."
     
     import asyncio
     max_retries = 3

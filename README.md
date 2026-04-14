@@ -8,6 +8,25 @@ This repository contains a full-stack proof-of-concept application for document 
 - **Frontend** (`/demo_ui`): A React frontend application strictly typed with TypeScript and bundled using Vite.
 - **Scripts** (`/scripts`): Various Python scripts used for pipeline execution, extraction, computer vision processing (e.g., rasterizing, path extraction), and data processing.
 
+## ⚡ Quick Start commands
+
+To quickly spin up both servers, open **two separate terminals**:
+
+**Terminal 1 (Backend):**
+```bash
+# Windows
+.\.venv\Scripts\Activate.ps1 && python api.py
+
+# macOS/Linux
+source .venv/bin/activate && python api.py
+```
+
+**Terminal 2 (Frontend):**
+```bash
+cd demo_ui
+npm run dev
+```
+
 ## Prerequisites
 
 Make sure you have the following installed on your system:

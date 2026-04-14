@@ -81,14 +81,19 @@ The demo follows a strong progressive disclosure flow. The system suggests, the 
 *   **Visual:** Back on `ST3-P07`, these 3 lines are drawn over the plan in distinct colors. For Subsoil Drain, a mini Section view highlights the drain while the Plan view shows the inferred line.
 *   **User Action:** User confirms all derived reference lines.
 
-### Step 7: Quantity Calculation Tasks ("The Money Moment")
-The system walks the user through individual quantity tasks visually. These are presented sequentially as compelling visual cards to prove understanding.
-*   **Concrete Pavement Area:** Visual card shows highlighted plan geometry + linked section snippet + formula + numeric area. User confirms.
-*   **GAP65 Volume:** Visual card shows Centreline + `DE04` spec + calculation (Length × Width × Thickness). 
-    *   *Intelligence Reuse Bubble:* "Reusing previously confirmed centerline for GAP65 multiple quantities." (Signals efficiency).
-*   **Footpath Area:** Visual card shows footpath polygon -> Output: Numeric Area.
-*   **Flush Nib Length:** Visual card shows boundary line (Plan) + formula + numeric length.
-*   **Subsoil Drain Length:** Visual card shows inner line -> System reiterates: "Interpreted from Section + aligned to Plan". User confirms sum.
+### Step 7: Final Results & Engineering Audit ("The Money Moment")
+The system presents a comprehensive final dashboard that brings together the results from the previous tasks, proving its engineering logic. Instead of just showing numbers, it shows the exact mathematical and geometric chain of evidence for each quantity.
+
+**Core Sections of the Final Page:**
+*   **Scale Establishment & Correction:** Explicitly shows how pixels were converted to meters, and how the 3D longitudinal slope correction factor was calculated and applied to 2D plan measurements.
+*   **Geometry Confirmation Summary:** A mapped overview showing the confirmed centerline, inner/outer kerbs, and footpath polygons.
+*   **Quantity Math & Derivation:** For each item, the system shows the step-by-step math used to arrive at the final volume or area:
+    *   **Concrete Pavement (150mm):** `Plan Area` × `Correction Term` = `Total Area (m²)`
+    *   **GAP65 Sub-base (150mm):** `Plan Area` × `Correction Term` × `Depth (0.15m from DE04)` = `Volume (m³)`
+    *   **Flush Nib (Outer Kerb):** `Outer Line Length` × `Correction Term` = `Total Length (m)`
+    *   **Subsoil Drain (Inner Kerb):** `Inner Line Length` × `Correction Term` = `Total Length (m)`
+    *   **Footpath:** `Plan Area` × `Correction Term` = `Total Area (m²)`
+*   **User Action:** The user reviews the mathematical proofs and clicks **✅ Export Schedule of Quantities** or **✅ Submit Confirmed Actions**.
 
 ### Step 8: Results Dashboard (Final Validated Output)
 *   **UI:** A polished summary panel. The top 2 results (e.g., Concrete Area, GAP65 Volume) are displayed as large hero cards. Below that, a clean table shows Item, Value, Confidence, and Source.

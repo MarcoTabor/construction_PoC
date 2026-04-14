@@ -37,6 +37,7 @@ export interface OrchestratorState {
   highlight_bbox?: number[];
   highlight_polygon?: number[][];
   registered_objects?: ScopeObject[];
+  math_derivations?: { item: string, reasoning: string, formula: string, result: string }[];
 }
 
 function App() {

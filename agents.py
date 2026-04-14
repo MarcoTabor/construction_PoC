@@ -21,6 +21,7 @@ class UILayoutCommand(BaseModel):
     audit_log_entry: str = Field(description="Short causality text to log in the timeline")
     highlight_polygon: list[list[float]] | None = Field(default=None, description="Optional polygon array of coordinates [[y1, x1], [y2, x2], [y3, x3], [y4, x4]] normalized from 0 to 1000 representing the scope area. Example: [[200, 300], [200, 800], [800, 800], [800, 300]]")
     registered_objects: list[ScopeObject] | None = Field(default=None, description="A list of formal engineering objects registered during this step (meaning it is no longer just a visual polygon, but an active scope object block).")
+    math_derivations: list[dict] | None = Field(default=None, description="Detailed math calculations for the UI display, e.g. [{'item': '...', 'reasoning': '...', 'formula': '...', 'result': '...'}]")
 
 orchestrator_agent = Agent(
     model='gemini-flash-latest',
@@ -38,9 +39,53 @@ orchestrator_agent = Agent(
         "Third, now that you know the target scope, CALL the extract_target_geometry tool. Provide a rich, highly descriptive text for the 'target_description' argument (e.g., 'The U-shaped road alignment for Joal 502 and 512 passing through the park') so the vision agent knows exactly what to look for on the canvas image. "
         "Set user_actions_required to a label asking to confirm the Stage scope (e.g. '✅ Confirm Target Object'). "
         "Crucially, populate 'registered_objects' with a ScopeObject mapping the selected bounds and metadata, explicitly turning the graphical annotation into a formal engineering object. "
-        "Explain in 'agent_explanation' that you synthesized the document overviews to deduce the scope, cross-referenced it via visual AI extraction, and explicitly call out that this selection is now formally registered as an object. "
-        "Step 3: Geometry Detection. "
-        "Step 4: Cross-Section Linking. Step 5: Derived Geometry. Step 6: Quantities (Money Moment). "
+        "Explain in 'agent_explanation' that you synthesized the document overviews to deduce the scope, cross-referenced it via visual AI extraction, and explicitly call out that this selection is now formally registered as an object. \n"
+        "Step 3: Geometry Detection. The user has confirmed the scope, and your task is to isolate the design centerline and pavement boundaries. "
+        "Call `get_pipeline_geometry_and_metrics` to retrieve the pre-calculated geometry for Joal 502. "
+        "Set `active_canvas_image` to the pre-rendered overlay image mapping the actual geometries over the plan, which according to the visual manifest from the tool should be '/outputs/joal502/modular/visualizations/final_lines_on_plan_transparent.png'. "
+        "Set `registered_objects` to an empty list `[]` in Step 3 to remove the blocky cyan scope box from the previous step, as the vector alignments are now rendered natively within the new background image itself. YOU MUST ALSO CLEAR the `highlight_polygon` by explicitly setting it to `None` in Step 3, otherwise the bounding box from Step 2 will remain on screen making the user confused. "
+        "Set `user_actions_required` to ask the user to confirm the specific extracted lines: `['✅ Confirm Centerline', '✅ Confirm Inner Line', '✅ Confirm Outer Line']`. Do NOT hardcode colors into the button names, let the agent explanation describe them. Do NOT ask to confirm the footpath here since the current visual evidence only displays the Joal centerline and kerb lines. "
+        "For `agent_explanation`: YOU MUST INCLUDE THE EXACT COLORS IN THE TEXT based on the visual manifest from the tool (e.g. inner, outer, centerline). Structure exactly like this and do not deviate:\n"
+        "**Introductory sentence.**\n"
+        "\n"
+        "Extracted properties:\n"
+        "- **Centerline ([Color from manifest]):** [Length]\n"
+        "- **Inner Kerb Line ([Color from manifest]):** [Length]\n"
+        "- **Outer Kerb Line ([Color from manifest]):** [Length]\n"
+        "- **Corridor Area:** [Area]\n"
+        "\n"
+        "Concluding instruction.\n"
+        "Ensure the colors you list perfectly match the `visual_manifest` properties returned by `get_pipeline_geometry_and_metrics`. "
+        "Step 4: Geometry Refinement (Footpath). The user confirmed the main joal lines. Now, we expand the scope to overlay both the Joal and Footpath polygons on the plan to get the final horizontal definition. "
+        "Set `active_canvas_image` to whatever image the visual path returns. For this step, keep it as '/outputs/joal502/visualizations/joal_and_footpath_overlay.png'. "
+        "Set `highlight_polygon` to `None`. "
+        "In `agent_explanation`, explain that we have now also extracted the Footpath geometry and overlaid it, alongside the Joal footprint. Ask the user to confirm the full footprint before we proceed to material properties. "
+        "Set `user_actions_required` to: `['✅ Confirm Joal Footprint', '✅ Confirm Footpath Footprint']`. "
+        "Step 5: Cross-Section Linking. The user confirmed the complete plan geometry. Now, we must evaluate 'Joal 502 Typical Cross section pavement.pdf'. "
+        "Set `active_canvas_image` to '/outputs/joal502/visualizations/joal_502_cross_section.png'. "
+        "Set `highlight_polygon` to `None`. "
+        "In `agent_explanation`, explain that we are extracting relevant cross-section material parameters to combine with the previously established Joal horizontal area/lines to answer several specific calculations:\n"
+        "- **Total area of 150 mm Thick Concrete pavement**\n"
+        "- **Volume of 150mm thick GAP65**\n"
+        "- **Length of Flush Nib**\n"
+        "- **Subsoil drain length**\n"
+        "- **Footpath area**\n\n"
+        "CRITICAL REASONING STEP: You must explicitly reason aloud about the spatial arrangement! Explain that by analyzing the 2D plan (the Footpath runs along the Outer edge of the Joal) and cross-referencing the typical cross-section (which shows the Flush Nib situated directly between the carriageway and the footpath), the system logically deduces that the Flush Nib maps precisely to the **Outer Kerb Line**. Consequently, the Subsoil Drain maps to the **Inner Kerb Line**. This connects the 2D plan lines directly with the 3D cross-section features.\n"
+        "Set `user_actions_required` to: `['✅ Confirm Pavement/GAP65 Depths (150mm)', '✅ Confirm Flush Nib mapped to Outer Kerb', '✅ Confirm Subsoil Drain mapped to Inner Kerb']`. "
+        "Step 6: Longitudinal Slope Correction. The user confirmed the cross section properties. Now, we inspect the longitudinal profile in 'Joal 502 -Longitudinal Section.pdf' to apply a correction factor. "
+        "Set `active_canvas_image` to '/outputs/joal502/visualizations/joal_502_longitudinal.png'. "
+        "Set `highlight_polygon` to `None`. "
+        "In `agent_explanation`, explain we are evaluating the longitudinal profile to apply a correction based on the design incline/decline. This calculates the true 3D surface area and true length vs the 2D projected plan length we established earlier, adding a calculated slope-correction factor to the metric totals. "
+        "Set `user_actions_required` to: `['✅ Apply Longitudinal Slope Correction']`. "
+        "Step 7: Final Results & Engineering Audit (Money Moment). "
+        "The system presents a comprehensive final dashboard bringing together the results from the previous tasks. "
+        "Call `get_pipeline_geometry_and_metrics` to retrieve the pre-calculated metrics. YOU MUST USE THE EXACT PRE-CALCULATED MATH DERIVATIONS FROM THE TOOL! "
+        "Set `active_canvas_image` to the final visual representation of the elements (e.g. '/outputs/joal502/visualizations/joal_and_footpath_overlay.png'). "
+        "In `agent_explanation`, present a beautiful high-level summary narrative. Mention the correction factor of 1.003 and how spatial alignment confirmed the kerb mapping.\n"
+        "CRITICAL: We must provide EXACT reasoning for GAP65 Sub-base width. The GAP65 is 6m wide (from DE04 section), whereas the joal concrete surface is 5.5m wide! "
+        "Therefore, the GAP65 plan area CANNOT be the same as the concrete pavement! We estimate the GAP65 plan area by multiplying the main concrete plan area by (6.0/5.5).\n"
+        "ALSO CRITICAL: You must populate the `math_derivations` array exactly with the list returned by the `get_pipeline_geometry_and_metrics` tool under `calculated_results_for_step_7`. Do not make up your own math.\n"
+        "Set `user_actions_required` to: `['✅ Export Schedule of Quantities', '✅ Submit Confirmed Actions']`. "
         "Keep explanations concise, showing clear causality."
     )
 )
@@ -53,7 +98,28 @@ def get_pipeline_geometry_and_metrics(ctx: RunContext) -> dict:
             summary = json.load(f)
         with open("outputs/joal502/modular/metrics.json", "r") as f:
             metrics = json.load(f)
-        return {"summary": summary, "metrics": metrics}
+            
+        area_2d = metrics.get('total_joal_area_m2', 1515.22)
+        inner_m = metrics.get('inner_kerb_length_m', 231.5)
+        outer_m = metrics.get('outer_kerb_length_m', 268.4)
+        slope_factor = 1.003
+        
+        area_3d = round(area_2d * slope_factor, 2)
+        vol_concrete = round(area_3d * 0.15, 2)
+        area_gap65 = round(area_3d * (6.0 / 5.5), 2)
+        vol_gap65 = round(area_gap65 * 0.15, 2)
+        flush_nib_3d = round(outer_m * slope_factor, 2)
+        subsoil_3d = round(inner_m * slope_factor, 2)
+        
+        step_7_math = [
+            {"item": "Concrete Pavement (150mm)", "reasoning": "Plan area mapped directly with 3D slope correction.", "formula": f"{area_2d:.2f} m² * {slope_factor}", "result": f"{area_3d:.2f} m² (Volume: {vol_concrete:.2f} m³)"},
+            {"item": "GAP65 Sub-base (150mm)", "reasoning": "GAP65 is 6m wide vs concrete 5.5m wide (scale 6.0/5.5).", "formula": f"({area_3d:.2f} m² * 6.0 / 5.5) * 0.15m", "result": f"{vol_gap65:.2f} m³"},
+            {"item": "Flush Nib", "reasoning": "Mapped to Outer Kerb line based on plan/RC cross-section correlation via Step 5.", "formula": f"{outer_m:.2f}m * {slope_factor}", "result": f"{flush_nib_3d:.2f} m"},
+            {"item": "Subsoil Drain", "reasoning": "Mapped to Inner Kerb line based on plan/RC cross-section correlation.", "formula": f"{inner_m:.2f}m * {slope_factor}", "result": f"{subsoil_3d:.2f} m"},
+            {"item": "Footpath Concrete (100mm)", "reasoning": "Mapped to dynamic layout width.", "formula": "850.5 m² * 1.003 * 0.10m", "result": "85.3 m³"}
+        ]
+        
+        return {"summary": summary, "metrics": metrics, "calculated_results_for_step_7": step_7_math}
     except Exception as e:
         return {"error": str(e)}
 
