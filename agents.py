@@ -21,7 +21,6 @@ class UILayoutCommand(BaseModel):
     audit_log_entry: str = Field(description="Short causality text to log in the timeline")
     highlight_polygon: list[list[float]] | None = Field(default=None, description="Optional polygon array of coordinates [[y1, x1], [y2, x2], [y3, x3], [y4, x4]] normalized from 0 to 1000 representing the scope area. Example: [[200, 300], [200, 800], [800, 800], [800, 300]]")
     registered_objects: list[ScopeObject] | None = Field(default=None, description="A list of formal engineering objects registered during this step (meaning it is no longer just a visual polygon, but an active scope object block).")
-    math_derivations: list[dict] | None = Field(default=None, description="Detailed math calculations for the UI display, e.g. [{'item': '...', 'reasoning': '...', 'formula': '...', 'result': '...'}]")
 
 orchestrator_agent = Agent(
     model='gemini-flash-latest',
@@ -32,6 +31,7 @@ orchestrator_agent = Agent(
         "You have access to precalculated pipeline data (vectors, lengths, areas) via tools. "
         "When the user confirms a step, you output the configuration for the *next* step. "
         "CRITICAL: Do NOT skip steps! ALWAYS advance step_id by exactly 1."
+        "After each step, you MUST call `store_step_audit_state` to explicitly extract and save the relevant numeric data, the user decision, the chosen active image, and your explanation. This maintains state across steps."
         "Step 1: Upload. "
         "Step 2: Scope Selection. You MUST wait for user confirmation here! The user has uploaded a mix of detailed plans and a general overview plan. "
         "First, analyze the provided document analysis context (Overview and Relationships). Deduce the specific project scope, road alignment (e.g., Joal 502/512), or structural stage that natively ties all the detailed sheets back to the general plan. "
@@ -77,16 +77,21 @@ orchestrator_agent = Agent(
         "Set `highlight_polygon` to `None`. "
         "In `agent_explanation`, explain we are evaluating the longitudinal profile to apply a correction based on the design incline/decline. This calculates the true 3D surface area and true length vs the 2D projected plan length we established earlier, adding a calculated slope-correction factor to the metric totals. "
         "Set `user_actions_required` to: `['✅ Apply Longitudinal Slope Correction']`. "
-        "Step 7: Final Results & Engineering Audit (Money Moment). "
+                "Step 7: Final Results & Engineering Audit (Money Moment). "
         "The system presents a comprehensive final dashboard bringing together the results from the previous tasks. "
-        "Call `get_pipeline_geometry_and_metrics` to retrieve the pre-calculated metrics. YOU MUST USE THE EXACT PRE-CALCULATED MATH DERIVATIONS FROM THE TOOL! "
-        "Set `active_canvas_image` to the final visual representation of the elements (e.g. '/outputs/joal502/visualizations/joal_and_footpath_overlay.png'). "
-        "In `agent_explanation`, present a beautiful high-level summary narrative. Mention the correction factor of 1.003 and how spatial alignment confirmed the kerb mapping.\n"
-        "CRITICAL: We must provide EXACT reasoning for GAP65 Sub-base width. The GAP65 is 6m wide (from DE04 section), whereas the joal concrete surface is 5.5m wide! "
-        "Therefore, the GAP65 plan area CANNOT be the same as the concrete pavement! We estimate the GAP65 plan area by multiplying the main concrete plan area by (6.0/5.5).\n"
-        "ALSO CRITICAL: You must populate the `math_derivations` array exactly with the list returned by the `get_pipeline_geometry_and_metrics` tool under `calculated_results_for_step_7`. Do not make up your own math.\n"
+        "Call `get_pipeline_geometry_and_metrics` to retrieve the RAW design facts, geometries, and pipeline metrics. "
+        "Set `active_canvas_image` to the final visual representation of the elements (e.g. '/outputs/joal502/visualizations/joal_and_footpath_overlay.png'). " 
+        "In `agent_explanation`, you must dynamically trace a deductive reasoning process for the user using the RAW data provided by the tool:\n"
+        "1. Start with the scale validating the geometry.\n"
+        "2. Then state that the confirmed kerb lengths and confirmed 2D area (from Step 3 & 4) bring us to the total Joal 3D surface area (incorporating the slope factor).\n"
+        "3. Explain applying the depth (e.g. 150mm [Confirmed in Step 5 cross-section]) and safety factor (and why) to get the joal concrete volume.\n"
+        "4. Explain the GAP65 sub base calculation dynamically (divided by concrete width, multiplied by GAP65 width [Confirmed Step 5]) & why.\n"
+        "5. Explain how the outer kerb length [Confirmed Step 3] maps to the Flush Nib, and the inner kerb length [Confirmed Step 3] maps to the Subsoil Drain.\n"
+        "6. For the Footpath area, please do an area calculation first, then do the respective next steps for the volume (which is actually 150mm thickness thickness s. screenshot) using safety factor.\n"
+        "7. Finally, provide a quick, clean bulleted list of the different lengths, areas, and volumes without any explanations or calculations, just as an overview.\n"
         "Set `user_actions_required` to: `['✅ Export Schedule of Quantities', '✅ Submit Confirmed Actions']`. "
-        "Keep explanations concise, showing clear causality."
+        "ALWAYS explicitly name the colors (e.g. Joal centerline, Joal inner kerb, Joal outer kerb, and Footpath) when referring to them.\n"
+        "Keep explanations professional and deductive, showing clear causality."
     )
 )
 
@@ -104,24 +109,62 @@ def get_pipeline_geometry_and_metrics(ctx: RunContext) -> dict:
         outer_m = metrics.get('outer_kerb_length_m', 268.4)
         slope_factor = 1.003
         
-        area_3d = round(area_2d * slope_factor, 2)
-        vol_concrete = round(area_3d * 0.15, 2)
-        area_gap65 = round(area_3d * (6.0 / 5.5), 2)
-        vol_gap65 = round(area_gap65 * 0.15, 2)
-        flush_nib_3d = round(outer_m * slope_factor, 2)
-        subsoil_3d = round(inner_m * slope_factor, 2)
-        
-        step_7_math = [
-            {"item": "Concrete Pavement (150mm)", "reasoning": "Plan area mapped directly with 3D slope correction.", "formula": f"{area_2d:.2f} m² * {slope_factor}", "result": f"{area_3d:.2f} m² (Volume: {vol_concrete:.2f} m³)"},
-            {"item": "GAP65 Sub-base (150mm)", "reasoning": "GAP65 is 6m wide vs concrete 5.5m wide (scale 6.0/5.5).", "formula": f"({area_3d:.2f} m² * 6.0 / 5.5) * 0.15m", "result": f"{vol_gap65:.2f} m³"},
-            {"item": "Flush Nib", "reasoning": "Mapped to Outer Kerb line based on plan/RC cross-section correlation via Step 5.", "formula": f"{outer_m:.2f}m * {slope_factor}", "result": f"{flush_nib_3d:.2f} m"},
-            {"item": "Subsoil Drain", "reasoning": "Mapped to Inner Kerb line based on plan/RC cross-section correlation.", "formula": f"{inner_m:.2f}m * {slope_factor}", "result": f"{subsoil_3d:.2f} m"},
-            {"item": "Footpath Concrete (100mm)", "reasoning": "Mapped to dynamic layout width.", "formula": "850.5 m² * 1.003 * 0.10m", "result": "85.3 m³"}
-        ]
-        
-        return {"summary": summary, "metrics": metrics, "calculated_results_for_step_7": step_7_math}
+        raw_design_facts = {
+            "joal_2d_area": area_2d,
+            "inner_kerb_length": inner_m,
+            "outer_kerb_length": outer_m,
+            "slope_correction_factor": slope_factor,
+            "concrete_depth_m": 0.15,
+            "concrete_width_m": 5.5,
+            "gap65_depth_m": 0.15,
+            "gap65_width_m": 6.0,
+            "footpath_2d_area": 850.5,
+            "footpath_depth_m": 0.15,
+            "safety_factor_for_materials": 1.05
+        }
+
+        return {"summary": summary, "metrics": metrics, "raw_design_facts": raw_design_facts}
     except Exception as e:
         return {"error": str(e)}
+
+@orchestrator_agent.tool
+def store_step_audit_state(ctx: RunContext, step_id: int, decision: str, image_path: str, numeric_data: dict, explanation: str) -> str:
+    """Store the relevant state of the step (numeric data, reasoning, and visuals) in a JSON for persistent audit tracking across steps."""
+    log_file = "demo_audit_state.json"
+    
+    # Initialize or load
+    if os.path.exists(log_file):
+        with open(log_file, "r") as f:
+            try:
+                state = json.load(f)
+            except:
+                state = []
+    else:
+        state = []
+        
+    entry = {
+        "step_id": step_id,
+        "decision": decision,
+        "image": image_path,
+        "numeric_data": numeric_data,
+        "explanation": explanation
+    }
+    
+    # Override if step exists, or append
+    updated = False
+    for i, item in enumerate(state):
+        if item.get("step_id") == step_id:
+            state[i] = entry
+            updated = True
+            break
+            
+    if not updated:
+        state.append(entry)
+        
+    with open(log_file, "w") as f:
+        json.dump(state, f, indent=4)
+        
+    return f"State for step {step_id} successfully stored in audit log."
 
 class VisionRefinement(BaseModel):
     highlight_polygon: list[list[float]] = Field(description="Polygon array of coordinates [[y1, x1], [y2, x2], [y3, x3], [y4, x4]] normalized from 0 to 1000 representing the scope area.")
@@ -247,6 +290,7 @@ def generate_highlighted_target_image(ctx: RunContext, pdf_path: str, target_tex
         }
     except Exception as e:
         return {"error": str(e)}
+
 
 @vision_refiner_agent.tool
 def search_pdf_text_markers(ctx: RunContext, search_term: str) -> list[list[float]]:
